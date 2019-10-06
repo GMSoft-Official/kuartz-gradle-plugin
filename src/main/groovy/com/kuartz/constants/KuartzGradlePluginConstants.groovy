@@ -14,5 +14,5 @@ final class KuartzGradlePluginConstants {
 
     public static final String QDSL_LIBRARY = "com.querydsl:querydsl-apt:4.2.1"
 
-    public static final String QDSL_SOURCE_DIR = "src/main/java/kutay"
+    public static final String DEFAULT_QDSL_SOURCE_DIR = "src/main/java/"
 }

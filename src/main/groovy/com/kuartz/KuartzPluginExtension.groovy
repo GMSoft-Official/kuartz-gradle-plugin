@@ -13,7 +13,7 @@ class KuartzPluginExtension {
     boolean hibernate = false
     boolean querydslDefault = false
 
-    String qdslSourceDir = KuartzGradlePluginConstants.QDSL_SOURCE_DIR
+    String qdslSourceDir = KuartzGradlePluginConstants.DEFAULT_QDSL_SOURCE_DIR
 
     List aptOptions = []
 

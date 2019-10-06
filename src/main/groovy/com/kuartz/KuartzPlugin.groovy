@@ -14,9 +14,9 @@ import org.gradle.api.plugins.JavaPlugin
  */
 class KuartzPlugin implements Plugin<Project> {
 
-    public static final String TASK_GROUP = "KuartzPlugin"
-
     public static final Logger LOG = Logging.getLogger(KuartzPlugin.class)
+
+    public static final String TASK_GROUP = "KuartzPlugin"
 
     void apply(Project project) {
         LOG.info("Kuartz plugin yukleniyor")
