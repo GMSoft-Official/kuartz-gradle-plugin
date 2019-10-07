@@ -16,20 +16,13 @@ repositories {
     mavenLocal()
 }
 
-gradlePlugin {
-    plugins {
-        simplePlugin {
-            id = 'kuartz-plugin'
-            implementationClass = 'com.kuartz.KuartzPlugin'
-        }
-    }
-}
-
 //noinspection GroovyAssignabilityCheck
 dependencies {
 
     compile gradleApi()
     compile localGroovy()
+    compile "com.querydsl:querydsl-jpa:4.2.1"
+    annotationProcessor("com.querydsl:querydsl-apt:4.2.1")
 
     // Use the latest Groovy version for building this library
     implementation 'org.codehaus.groovy:groovy-all:2.5.4'

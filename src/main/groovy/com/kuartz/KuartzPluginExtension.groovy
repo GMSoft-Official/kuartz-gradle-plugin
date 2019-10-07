@@ -8,12 +8,16 @@ import com.kuartz.constants.KuartzGradlePluginConstants
  */
 class KuartzPluginExtension {
 
-    boolean jpa = false
+    boolean jpa = true
 
-    boolean hibernate = false
-    boolean querydslDefault = false
+    // Default qdsl apt library
+    String aptLibrary = KuartzGradlePluginConstants.DEFAULT_QDSL_LIBRARY
 
+    // querydsl
     String qdslSourceDir = KuartzGradlePluginConstants.DEFAULT_QDSL_SOURCE_DIR
+    String entityQueryPrefix = ""
+    String entityQuerySuffix = KuartzGradlePluginConstants.DEFAULT_QDSL_ENTITY_SUFFIX
+    String entityQueryPackageSuffix = KuartzGradlePluginConstants.DEFAULT_QDSL_PACKAGE_SUFFIX
 
     List aptOptions = []
 
@@ -21,16 +25,8 @@ class KuartzPluginExtension {
 
         List procs = []
 
-        if (hibernate) {
-            procs.add(KuartzGradlePluginConstants.HIBERNATE_PROCESSOR)
-        }
-
         if (jpa) {
             procs.add(KuartzGradlePluginConstants.JPA_PROCESSOR)
-        }
-
-        if (querydslDefault) {
-            procs.add(KuartzGradlePluginConstants.QDSL_LIBRARY)
         }
 
         return procs.join(",")
