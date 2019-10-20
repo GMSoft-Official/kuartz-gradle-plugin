@@ -6,6 +6,9 @@ Bu repository bir spring projesinde kullabilecek queryDSL teknolojisine ait bir 
 destekleyecek şekilde tasarlanmıştır. Groovy dilini kullanılarak geliştirilen plugin herhangi bir artifactory de 
 yayınlanmamıştır. 
 
+> **Not:** Plugini kullanabilmek için gradle tasklarının içerisinde publish task grubunun içerisinde  `publishToMavenLocal` taskı
+>kullanılmalıdır.
+
 Plugin Querydsl sınıflarını proje genelinde kolayca oluşturulmasını sağlar. Plugini kullanmak isteyen geliştirici Hibernate,
 Spring ve Querydsl kütüphanelerine bağımlılığı olması gerekmektedir.
 ---
