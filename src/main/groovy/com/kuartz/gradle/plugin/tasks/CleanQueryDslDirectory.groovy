@@ -1,6 +1,7 @@
-package com.kuartz.tasks
+package com.kuartz.gradle.plugin.tasks
 
-import com.kuartz.constants.KuartzGradlePluginConstants
+
+import com.kuartz.gradle.plugin.constants.KuartzGradlePluginConstants
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 

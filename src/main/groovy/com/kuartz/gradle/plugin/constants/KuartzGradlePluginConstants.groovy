@@ -1,4 +1,4 @@
-package com.kuartz.constants
+package com.kuartz.gradle.plugin.constants
 
 /**
  @author Kutay Celebi

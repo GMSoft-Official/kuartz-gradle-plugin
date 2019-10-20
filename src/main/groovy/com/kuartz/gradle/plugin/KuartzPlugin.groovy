@@ -1,9 +1,9 @@
-package com.kuartz
+package com.kuartz.gradle.plugin
 
-import com.kuartz.constants.KuartzGradlePluginConstants
-import com.kuartz.tasks.CleanQueryDslDirectory
+import com.kuartz.gradle.plugin.constants.KuartzGradlePluginConstants
+import com.kuartz.gradle.plugin.tasks.CleanQueryDslDirectory
 
-import com.kuartz.tasks.QueryDslCompile
+import com.kuartz.gradle.plugin.tasks.QueryDslCompile
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.logging.Logger

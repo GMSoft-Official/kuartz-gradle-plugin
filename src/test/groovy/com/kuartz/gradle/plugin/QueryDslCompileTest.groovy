@@ -1,7 +1,7 @@
-package com.kuartz
+package com.kuartz.gradle.plugin
 
 
-import com.kuartz.tasks.QueryDslCompile
+import com.kuartz.gradle.plugin.tasks.QueryDslCompile
 import org.gradle.api.Project
 import org.gradle.testfixtures.ProjectBuilder
 import org.testng.annotations.BeforeMethod

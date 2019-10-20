@@ -1,6 +1,6 @@
-package com.kuartz
+package com.kuartz.gradle.plugin
 
-import com.kuartz.tasks.CleanQueryDslDirectory
+import com.kuartz.gradle.plugin.tasks.CleanQueryDslDirectory
 import org.gradle.api.Project
 import org.gradle.testfixtures.ProjectBuilder
 import org.testng.annotations.BeforeMethod

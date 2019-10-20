@@ -1,8 +1,6 @@
-package com.kuartz.tasks
+package com.kuartz.gradle.plugin.tasks
 
-import com.kuartz.constants.KuartzGradlePluginConstants
-import org.gradle.api.Action
-import org.gradle.api.Task
+import com.kuartz.gradle.plugin.constants.KuartzGradlePluginConstants
 import org.gradle.api.plugins.WarPlugin
 import org.gradle.api.tasks.compile.JavaCompile
 import org.slf4j.Logger

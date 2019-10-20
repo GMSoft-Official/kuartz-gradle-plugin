@@ -1,6 +1,7 @@
-package com.kuartz
+package com.kuartz.gradle.plugin
 
-import com.kuartz.constants.KuartzGradlePluginConstants
+
+import com.kuartz.gradle.plugin.constants.KuartzGradlePluginConstants
 
 /**
  @author Kutay Celebi
