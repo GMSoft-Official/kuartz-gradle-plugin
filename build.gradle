@@ -1,5 +1,4 @@
 plugins {
-    // Apply the groovy plugin to add support for Groovy
     id 'groovy'
     id 'wrapper'
     id 'java-gradle-plugin'
@@ -39,6 +38,50 @@ gradlePlugin {
         mavenPublishPlugin {
             id = 'com.kuartz.core.gradle.querydsl'
             implementationClass = 'com.kuartz.gradle.plugin.KuartzPlugin'
+        }
+    }
+}
+
+
+task groocvyDoc(type: Jar) {
+    from groovydoc
+    archiveClassifier = 'groovydoc'
+}
+
+publishing {
+    publications {
+        pluginPublication(MavenPublication) {
+            artifact groocvyDoc
+            from components.java
+            groupId project.group
+            artifactId project.name
+            version project.version
+            pom {
+                name = 'Kuart Gradle Plugin'
+                description = 'Kuartz custom gradle plugins'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'kutaycelebi'
+                        name = 'Kutay Çelebi'
+                        email = 'mail@kutaycelebi.com'
+                    }
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            url 'http://10.10.14.35:8081/repository/maven-releases/'
+            credentials {
+                username 'admin'
+                password '2802nK.'
+            }
         }
     }
 }
