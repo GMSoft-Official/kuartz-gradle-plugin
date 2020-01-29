@@ -25,7 +25,7 @@ dependencies {
 }
 
 group = 'com.kuartz.core.plugin.gradle'
-version = '1.0'
+version = '1.1'
 
 gradlePlugin {
     plugins {
@@ -65,15 +65,6 @@ publishing {
                         email = 'mail@kutaycelebi.com'
                     }
                 }
-            }
-        }
-    }
-    repositories {
-        maven {
-            url 'http://10.10.14.35:8081/repository/maven-releases/'
-            credentials {
-                username 'admin'
-                password '2802nK.'
             }
         }
     }
