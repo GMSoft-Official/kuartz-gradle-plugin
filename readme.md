@@ -1,6 +1,6 @@
-<a href="https://codeclimate.com/github/kutay-celebi/kuartz-gradle-plugin/test_coverage"><img src="https://api.codeclimate.com/v1/badges/3ac3f963cd3296524f4d/test_coverage" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/3ac3f963cd3296524f4d/maintainability)](https://codeclimate.com/github/kutay-celebi/kuartz-gradle-plugin/maintainability)
 
-<a href="https://codeclimate.com/github/kutay-celebi/kuartz-gradle-plugin/maintainability"><img src="https://api.codeclimate.com/v1/badges/3ac3f963cd3296524f4d/maintainability" /></a>
+[![Test Coverage](https://api.codeclimate.com/v1/badges/3ac3f963cd3296524f4d/test_coverage)](https://codeclimate.com/github/kutay-celebi/kuartz-gradle-plugin/test_coverage)
 
 # Kuartz QueryDSL Gradle Plugin
 
