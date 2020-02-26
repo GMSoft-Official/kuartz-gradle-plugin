@@ -1,3 +1,7 @@
+<a href="https://codeclimate.com/github/kutay-celebi/kuartz-gradle-plugin/test_coverage"><img src="https://api.codeclimate.com/v1/badges/3ac3f963cd3296524f4d/test_coverage" /></a>
+
+<a href="https://codeclimate.com/github/kutay-celebi/kuartz-gradle-plugin/maintainability"><img src="https://api.codeclimate.com/v1/badges/3ac3f963cd3296524f4d/maintainability" /></a>
+
 # Kuartz QueryDSL Gradle Plugin
 
 ## Giriş
