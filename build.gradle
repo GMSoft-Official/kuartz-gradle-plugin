@@ -44,7 +44,7 @@ task groocvyDoc(type: Jar) {
 
 publishing {
     publications {
-        pluginPublication(MavenPublication) {
+        plugin(MavenPublication) {
             artifact groocvyDoc
             from components.java
             groupId project.group
