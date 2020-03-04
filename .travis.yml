@@ -1,0 +1,10 @@
+language: groovy
+
+# set sudo required for non-container vm with more mem even though we don't need sudo
+# https://docs.travis-ci.com/user/reference/overview/
+sudo: required
+dist: trusty
+install: true
+jdk:
+  - oraclejdk8
+bash <(curl -s https://codecov.io/bash)
