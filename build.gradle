@@ -17,7 +17,7 @@ dependencies {
     compile gradleApi()
     compile localGroovy()
 
-    compile(group: "com.querydsl", name: "querydsl-jpa", version: "${queryDslVersion}")
+    compileOnly(group: "com.querydsl", name: "querydsl-jpa", version: "${queryDslVersion}")
     annotationProcessor(group: "com.querydsl", name: "querydsl-apt", version: "${queryDslVersion}")
 
     implementation 'org.codehaus.groovy:groovy-all:2.5.4'
@@ -25,7 +25,7 @@ dependencies {
 }
 
 group = 'com.kuartz.core.plugin.gradle'
-version = '1.3'
+version = '1.3.5'
 sourceCompatibility = 1.8
 
 gradlePlugin {
@@ -42,9 +42,31 @@ task groocvyDoc(type: Jar) {
     archiveClassifier = 'groovydoc'
 }
 
+def gprusr
+def gprkey
+def githubProperties = new Properties()
+def file = rootProject.file("github.properties")
+if (file.exists()) {
+    githubProperties.load(new FileInputStream(file))
+    gprusr = githubProperties["gprusr"]
+    gprkey = githubProperties["gprkey"]
+} else {
+    gprusr = System.getenv("GITHUB_USERNAME")
+    gprkey = System.getenv("GITHUB_TOKEN")
+}
+
 publishing {
+    repositories {
+        maven {
+            url = uri("https://maven.pkg.github.com/kutay-celebi/kuartz-core")
+            credentials {
+                username = gprusr
+                password = gprkey
+            }
+        }
+    }
     publications {
-        plugin(MavenPublication) {
+        publication(MavenPublication) {
             artifact groocvyDoc
             from components.java
             groupId project.group

@@ -20,14 +20,18 @@ class QueryDslCompile extends JavaCompile {
 
         setSource(project.sourceSets.main.java)
 
-        if (project.plugins.hasPlugin(WarPlugin.class)) {
-            project.configurations {
-                kuartzplugin.extendsFrom compile, providedRuntime, providedCompile
-            }
-        } else {
-            project.configurations {
-                kuartzplugin.extendsFrom compile
-            }
+//        if (project.plugins.hasPlugin(WarPlugin.class)) {
+//            project.configurations {
+//                kuartzplugin.extendsFrom compile, providedRuntime, providedCompile
+//            }
+//        } else {
+//            project.configurations {
+//                kuartzplugin.extendsFrom compileClasspath
+//            }
+//        }
+
+        project.configurations {
+            kuartzplugin.extendsFrom compileClasspath
         }
 
         project.afterEvaluate {

@@ -22,12 +22,20 @@ class KuartzPluginExtension {
 
     List aptOptions = []
 
+    List customProcessors = []
+
     String processors() {
 
         List procs = []
 
         if (jpa) {
             procs.add(KuartzGradlePluginConstants.JPA_PROCESSOR)
+        }
+
+        if (customProcessors != null ){
+            for(String item : customProcessors){
+                procs.add(item)
+            }
         }
 
         return procs.join(",")
